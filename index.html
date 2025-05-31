@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄羅斯方塊 - Tetris Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>TETRIS</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <label>分數</label>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat-item">
+                    <label>等級</label>
+                    <span id="level">1</span>
+                </div>
+                <div class="stat-item">
+                    <label>消除行數</label>
+                    <span id="lines">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="next-piece">
+                <h3>下一個</h3>
+                <canvas id="nextCanvas" width="120" height="120"></canvas>
+            </div>
+
+            <div class="main-game">
+                <canvas id="gameCanvas" width="300" height="600"></canvas>
+                <div class="game-over" id="gameOver">
+                    <h2>遊戲結束</h2>
+                    <p>最終分數: <span id="finalScore">0</span></p>
+                    <button id="restartBtn">重新開始</button>
+                </div>
+            </div>
+
+            <div class="controls">
+                <h3>操作說明</h3>
+                <div class="control-list">
+                    <div class="control-item">
+                        <span class="key">←→</span>
+                        <span>左右移動</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">↓</span>
+                        <span>快速下降</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">↑</span>
+                        <span>旋轉</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">空白鍵</span>
+                        <span>暫停/繼續</span>
+                    </div>
+                </div>
+                <button id="pauseBtn">暫停</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
